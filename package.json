@@ -10,7 +10,8 @@
     "typescript": "^4.2.2"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "concurrently -n COMPILER,NODEMON -c yellow,blue \"tsc -w\" \"nodemon -w dist -q dist/index.js\""
   },
   "repository": {
     "type": "git",
