@@ -1,0 +1,25 @@
+{
+  "name": "simple-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7",
+    "typescript": "^4.2.2"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floorford/using-typescript-w-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/floorford/using-typescript-w-react/issues"
+  },
+  "homepage": "https://github.com/floorford/using-typescript-w-react#readme"
+}
