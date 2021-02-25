@@ -66,5 +66,6 @@ flyingRobot.move(10); // Neil is flying; Neil moved 10 metres
 // MODIFIERS: public, private, protected, redaonly
 // if nothing specified public is default
 // private: only accessible within the class where you're doing your declaration
+// private can also be declared with the # symbol
 // protected: only accessible from the defined class or subclass, consumer can't access from outside
 // readonly: can't be modified
