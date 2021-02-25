@@ -1,4 +1,7 @@
 // A TS class - everything works as in JS, just have to remember to type things!
+// a class in TS has 2 sides: static and instance
+// aka static methods cannot be called by the instance, only inside the declaration
+// The static side includes the static members of the class and the constructor
 class Robot {
   public colour: string;
 
