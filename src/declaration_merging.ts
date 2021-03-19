@@ -75,3 +75,24 @@ namespace Salad {
 }
 
 Salad.availableDressings.includes("olive oil");
+
+// you can also extend modules by using the same name style
+// pretend we have installed React, and we want to extend the Component module
+
+declare module "react" {
+  interface Component {
+    helloWorld(): string;
+  }
+}
+
+// note you cannot add custom exports
+
+React.Component.prototype.helloWorld = function () {
+  return "Hello World";
+};
+
+class MyComponent extends React.Component {
+  render() {
+    return <div>{this.helloWorld()}</div>;
+  }
+}
