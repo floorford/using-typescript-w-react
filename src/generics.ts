@@ -20,6 +20,16 @@ interface GenericInterface<T> {
   someProp: T;
 }
 
+// Generic Classes
+class GenericClass<P> {
+  constructor(public props: P) {}
+
+  getProps(): P {
+    return this.props;
+  }
+}
+
+// cakes generic example
 interface Expirable {
   expiryDate: Date;
 }
@@ -48,11 +58,25 @@ const getExpiredItems: GetExpiredItemsFunction = (items) => {
 const expiredChocCakes = getExpiredItems<ChocolateCake>(chocCakes);
 const expiredVanillaCakes = getExpiredItems<VanillaCake>(vanillaCakes);
 
-// Generic Classes
-class GenericClass<P> {
-  constructor(public props: P) {}
+// shopping cart generics example
+interface ShoppingCart<ItemId, Item> {
+    items: Array<Item>,
+    addItem: (this: ShoppingCart<ItemId, Item>, item: Item): void;
+    getItemById(this: ShoppingCart<ItemId, Item>, id: ItemId): Item | undefined
+}
 
-  getProps(): P {
-    return this.props;
-  }
+interface Item {
+    id: number;
+    name: string;
+    price: number;
+}
+
+const cart: ShoppingCart<number, Item> = {
+    items: [],
+    addItem(item) {
+        this.items.push(item)
+    },
+    getItemById(id) {
+        return this.items.find(item => item.id === id)
+    }
 }
