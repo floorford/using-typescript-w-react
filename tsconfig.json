@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
+    "target": "es6",
+    "module": "es6",
     "outDir": "dist",
     "strict": true,
     "jsx": "react",
@@ -9,5 +9,6 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": false
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["src/notes_examples/*"]
 }
