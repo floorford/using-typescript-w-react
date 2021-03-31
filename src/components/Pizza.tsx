@@ -1,4 +1,5 @@
 import React from "react";
+import PizzaCSS from "./Pizza.module.css";
 
 // for a functional component you should describe the component type...
 interface Pizza {
@@ -16,7 +17,7 @@ interface Props {
 // React.FC stands for functional component
 const Pizza: React.FC<Props> = ({ pizza }) => {
   return (
-    <li>
+    <li className={PizzaCSS.container}>
       <h2>{pizza.name}</h2>
       <p>{pizza.description}</p>
       <p>£{pizza.price}</p>
