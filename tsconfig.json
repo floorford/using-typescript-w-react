@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "esnext",
     "module": "es6",
     "outDir": "dist",
-    "strict": true,
     "jsx": "react",
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": true,
     "esModuleInterop": true,
     "strictNullChecks": true,
+    "skipLibCheck": true,
     "strictPropertyInitialization": false
   },
   "include": ["src/**/*"],
