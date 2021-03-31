@@ -23,3 +23,4 @@ const resultTypeB = someFunction("banana");
 
 type StringOrNot<T> = T extends string ? string : never;
 // never can be used to filter union type, represents something which never exists
+// this is actually what Exclude<T> does!
